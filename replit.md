@@ -8,6 +8,8 @@ This is a React.js TicTacToe game built following structured development workflo
 
 Preferred communication style: Simple, everyday language.
 Project goals: Create a simple, functional TicTacToe game for easy GitHub deployment.
+Deploy timeline: Ready for deployment within 1 hour.
+Design preference: Colorful, modern interface with gradients and animations.
 
 ## System Architecture
 
