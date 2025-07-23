@@ -24,12 +24,13 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
   
-  /* TicTacToe Game Colors */
-  --game-primary: hsl(225, 83%, 53%);
-  --game-secondary: hsl(0, 73%, 50%);
-  --game-success: hsl(158, 73%, 39%);
-  --game-neutral: hsl(210, 40%, 98%);
-  --game-dark: hsl(216, 28%, 23%);
+  /* TicTacToe Game Colors - Nueva paleta vibrante */
+  --game-red: hsl(0, 100%, 50%);        /* Rojo puro */
+  --game-yellow: hsl(60, 100%, 50%);    /* Amarillo puro */
+  --game-blue: hsl(240, 100%, 50%);     /* Azul puro */
+  --game-green: hsl(120, 100%, 25%);    /* Verde puro */
+  --game-neutral: hsl(0, 0%, 100%);     /* Blanco */
+  --game-dark: hsl(0, 0%, 0%);
 }
 
 .dark {

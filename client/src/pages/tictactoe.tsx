@@ -144,15 +144,15 @@ const TicTacToe = () => {
   const isDraw = !winner && board.every(cell => cell);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-orange-100 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-400 via-red-400 via-yellow-400 to-green-400 p-8">
       <div className="max-w-4xl mx-auto">
         
         {/* Título */}
         <div className="text-center mb-8">
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent mb-4">
+          <h1 className="text-6xl font-bold bg-gradient-to-r from-red-600 via-blue-600 via-yellow-500 to-green-600 bg-clip-text text-transparent mb-4 drop-shadow-lg">
             TicTacToe
           </h1>
-          <p className="text-xl text-gray-700 font-medium">Construido con React.js ⚛️</p>
+          <p className="text-xl text-white font-bold drop-shadow-md">Construido con React.js ⚛️</p>
         </div>
 
         <div className="flex flex-col xl:flex-row gap-6 lg:gap-8 items-center justify-center">
@@ -163,20 +163,20 @@ const TicTacToe = () => {
             {/* Estado del juego */}
             <div className="text-center mb-4 lg:mb-6">
               {winner ? (
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent animate-bounce">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-600 animate-bounce bg-white rounded-lg p-3 shadow-lg">
                   ¡Jugador {winner} ganó! 🎉
                 </div>
               ) : isDraw ? (
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-yellow-600 bg-white rounded-lg p-3 shadow-lg">
                   ¡Empate! 🤝
                 </div>
               ) : (
-                <div className="text-lg sm:text-xl font-semibold text-gray-800">
+                <div className="text-lg sm:text-xl font-semibold text-white bg-black/20 rounded-lg p-3 backdrop-blur-sm">
                   <div className="mb-2">Turno del Jugador:</div>
-                  <span className={`inline-block px-3 py-1 rounded-full text-white font-bold text-lg ${
+                  <span className={`inline-block px-4 py-2 rounded-full text-white font-bold text-xl shadow-lg ${
                     isXNext 
-                      ? "bg-gradient-to-r from-blue-500 to-cyan-500 shadow-lg shadow-blue-500/25" 
-                      : "bg-gradient-to-r from-red-500 to-pink-500 shadow-lg shadow-red-500/25"
+                      ? "bg-blue-500 border-2 border-blue-300" 
+                      : "bg-red-500 border-2 border-red-300"
                   }`}>
                     {isXNext ? "X" : "O"}
                   </span>
@@ -189,21 +189,21 @@ const TicTacToe = () => {
               {board.map((cell, index) => (
                 <button
                   key={index}
-                  className={`text-3xl sm:text-4xl lg:text-5xl font-bold rounded-lg lg:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed shadow-md ${
+                  className={`text-3xl sm:text-4xl lg:text-5xl font-bold rounded-lg lg:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed shadow-lg ${
                     cell 
-                      ? 'bg-gradient-to-br from-white to-gray-50 border-2 border-gray-200' 
-                      : 'bg-gradient-to-br from-gray-50 to-gray-100 hover:from-indigo-50 hover:to-purple-50 border-2 border-gray-200 hover:border-indigo-300 active:border-indigo-400'
+                      ? 'bg-white border-4 border-gray-300' 
+                      : 'bg-white hover:bg-gradient-to-br hover:from-red-100 hover:via-yellow-100 hover:to-blue-100 border-4 border-gray-300 hover:border-red-400'
                   }`}
                   onClick={() => handleClick(index)}
                   disabled={winner || isDraw || cell}
                 >
                   {cell === "X" && (
-                    <span className="bg-gradient-to-br from-blue-500 to-cyan-600 bg-clip-text text-transparent drop-shadow-lg">
+                    <span className="text-blue-600 drop-shadow-xl font-black">
                       ✕
                     </span>
                   )}
                   {cell === "O" && (
-                    <span className="bg-gradient-to-br from-red-500 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
+                    <span className="text-red-600 drop-shadow-xl font-black">
                       ○
                     </span>
                   )}
@@ -215,7 +215,7 @@ const TicTacToe = () => {
             <div className="text-center">
               <button
                 onClick={resetGame}
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border-2 border-white"
               >
                 🔄 Reiniciar Juego
               </button>
@@ -226,57 +226,57 @@ const TicTacToe = () => {
           <div className="w-full xl:w-80 space-y-4 lg:space-y-6">
             
             {/* Puntuación */}
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-4 sm:p-6 border border-gray-200">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-yellow-400">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-green-600 mb-3 sm:mb-4">
                 🏆 Puntuación
               </h3>
               <div className="space-y-3 sm:space-y-4">
-                <div className="flex justify-between items-center p-3 sm:p-4 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg sm:rounded-xl border-l-4 border-blue-500 shadow-sm">
+                <div className="flex justify-between items-center p-3 sm:p-4 bg-blue-100 rounded-lg sm:rounded-xl border-4 border-blue-500 shadow-sm">
                   <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm sm:text-base">✕</span>
                     </div>
                     <span className="font-bold text-gray-800 text-sm sm:text-base">Jugador X</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-br from-blue-500 to-cyan-600 bg-clip-text text-transparent">{scores.X}</span>
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600">{scores.X}</span>
                 </div>
-                <div className="flex justify-between items-center p-3 sm:p-4 bg-gradient-to-r from-red-100 to-pink-100 rounded-lg sm:rounded-xl border-l-4 border-red-500 shadow-sm">
+                <div className="flex justify-between items-center p-3 sm:p-4 bg-red-100 rounded-lg sm:rounded-xl border-4 border-red-500 shadow-sm">
                   <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-red-600 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm sm:text-base">○</span>
                     </div>
                     <span className="font-bold text-gray-800 text-sm sm:text-base">Jugador O</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-br from-red-500 to-pink-600 bg-clip-text text-transparent">{scores.O}</span>
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-600">{scores.O}</span>
                 </div>
-                <div className="flex justify-between items-center p-3 sm:p-4 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-lg sm:rounded-xl border-l-4 border-yellow-500 shadow-sm">
+                <div className="flex justify-between items-center p-3 sm:p-4 bg-yellow-100 rounded-lg sm:rounded-xl border-4 border-yellow-500 shadow-sm">
                   <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-600 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-xs sm:text-sm">🤝</span>
                     </div>
                     <span className="font-bold text-gray-800 text-sm sm:text-base">Empates</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-br from-yellow-500 to-orange-500 bg-clip-text text-transparent">{scores.draws}</span>
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-600">{scores.draws}</span>
                 </div>
               </div>
             </div>
 
             {/* Instrucciones */}
-            <div className="bg-gradient-to-br from-white to-indigo-50 rounded-xl shadow-lg p-4 sm:p-6 border border-indigo-200">
-              <h3 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-red-400">
+              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3 sm:mb-4">
                 🎮 Cómo Jugar
               </h3>
               <div className="text-gray-700 space-y-2 sm:space-y-3 text-sm sm:text-base">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">1</span>
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">1</span>
                   <p>Haz clic en una casilla vacía para marcarla</p>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">2</span>
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">2</span>
                   <p>Consigue 3 en línea para ganar</p>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">3</span>
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-red-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">3</span>
                   <p>Puede ser horizontal, vertical o diagonal</p>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
