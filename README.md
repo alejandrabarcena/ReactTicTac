@@ -9,25 +9,26 @@ Un juego de TicTacToe completamente funcional construido con React.js, siguiendo
 ## ✨ Características
 
 - 🎯 **Juego Completamente Funcional**: Tablero 3x3 con detección de ganador y empates
-- 🎨 **Diseño Moderno**: Interfaz colorida con gradientes y animaciones suaves
+- 🎨 **Diseño Vibrante**: Interfaz con colores puros (rojo, azul, amarillo, verde)
+- 🔊 **Efectos de Sonido**: Audio interactivo con Web Audio API
 - 📊 **Sistema de Puntuación**: Seguimiento de victorias y empates en tiempo real
 - 🔄 **Reinicio Rápido**: Botón para empezar nuevas partidas instantáneamente
 - 📱 **Responsive**: Funciona perfectamente en desktop y móvil
-- 🎓 **Educativo**: Panel lateral con explicaciones de conceptos React
+- 🎓 **Educativo**: Panel lateral con explicaciones de conceptos React y tecnologías
 
 ## 🚀 Demo en Vivo
 
 [Ver Demo](https://tu-proyecto.replit.app) *(Actualiza con tu URL de deploy)*
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Stack Tecnológico
 
 ### Frontend
-- **React 18** - Librería de JavaScript para interfaces de usuario
-- **TypeScript** - Superset de JavaScript con tipado estático
-- **Tailwind CSS** - Framework de CSS utility-first
-- **Vite** - Build tool y servidor de desarrollo ultra-rápido
-- **Wouter** - Router minimalista para React
-- **Lucide React** - Iconos SVG modernos
+- **⚛️ React 18** - Librería de JavaScript para interfaces de usuario
+- **🔷 TypeScript** - Superset de JavaScript con tipado estático
+- **🎨 Tailwind CSS** - Framework de CSS utility-first
+- **⚡ Vite** - Build tool y servidor de desarrollo ultra-rápido
+- **🔗 Wouter** - Router minimalista para React
+- **📱 Lucide React** - Iconos SVG modernos
 
 ### Backend
 - **Express.js** - Framework web para Node.js
@@ -114,7 +115,8 @@ Este proyecto demuestra conceptos clave de React:
 
 ## 🎨 Características de Diseño
 
-- **Gradientes Coloridos** - Uso extensivo de gradientes CSS
+- **Colores Puros Vibrantes** - Paleta de rojo, azul, amarillo y verde intensos
+- **Sin Gradientes** - Diseño minimalista con colores sólidos
 - **Animaciones Suaves** - Transiciones y efectos hover
 - **Iconografía Moderna** - Símbolos ✕ y ○ estilizados
 - **Layout Responsive** - Adaptado para todos los tamaños de pantalla
@@ -144,9 +146,9 @@ Este proyecto demuestra conceptos clave de React:
 
 ## 👨‍💻 Autor
 
-**Tu Nombre**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+**Patsy The Pug Dev**
+- Proyecto educativo desarrollado con React.js y TypeScript
+- Enfoque en aprendizaje de conceptos fundamentales de React
 
 ---
 

@@ -318,20 +318,39 @@ const TicTacToe = () => {
               </h3>
               <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
                 <div className="bg-blue-50 border-4 border-blue-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="font-bold text-blue-700">React 18 + TypeScript</div>
-                  <div className="text-blue-600">Interfaz moderna con tipado estático</div>
-                </div>
-                <div className="bg-red-50 border-4 border-red-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="font-bold text-red-700">Tailwind CSS</div>
-                  <div className="text-red-600">Estilos utility-first y responsive</div>
-                </div>
-                <div className="bg-yellow-50 border-4 border-yellow-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="font-bold text-yellow-700">Vite</div>
-                  <div className="text-yellow-600">Build tool ultra-rápido</div>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <img src="@assets/2_1753301496354.PNG" alt="React" className="w-6 h-6" />
+                    <div className="font-bold text-blue-700">React 18</div>
+                  </div>
+                  <div className="text-blue-600">Interfaz moderna con Hooks</div>
                 </div>
                 <div className="bg-green-50 border-4 border-green-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="font-bold text-green-700">Web Audio API</div>
-                  <div className="text-green-600">Efectos de sonido nativos</div>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <img src="@assets/1.1_1753301502920.PNG" alt="TypeScript" className="w-6 h-6" />
+                    <div className="font-bold text-green-700">TypeScript</div>
+                  </div>
+                  <div className="text-green-600">Tipado estático y seguridad</div>
+                </div>
+                <div className="bg-yellow-50 border-4 border-yellow-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="flex items-center space-x-2 mb-1">
+                    <img src="@assets/2.2_1753301496354.PNG" alt="Vite" className="w-6 h-6" />
+                    <div className="font-bold text-yellow-700">Vite</div>
+                  </div>
+                  <div className="text-yellow-600">Build tool ultra-rápido</div>
+                </div>
+                <div className="bg-red-50 border-4 border-red-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="flex items-center space-x-2 mb-1">
+                    <img src="@assets/3_1753301496354.png" alt="GitHub" className="w-6 h-6" />
+                    <div className="font-bold text-red-700">GitHub</div>
+                  </div>
+                  <div className="text-red-600">Control de versiones</div>
+                </div>
+                <div className="bg-purple-50 border-4 border-purple-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="flex items-center space-x-2 mb-1">
+                    <img src="@assets/1_1753301496353.PNG" alt="Development" className="w-6 h-6" />
+                    <div className="font-bold text-purple-700">Web Development</div>
+                  </div>
+                  <div className="text-purple-600">Audio API + Responsive Design</div>
                 </div>
               </div>
             </div>
@@ -347,6 +366,10 @@ const TicTacToe = () => {
             <p className="text-blue-500 mt-2 text-sm font-semibold">
               Juego interactivo con React.js y TypeScript
             </p>
+            <div className="flex justify-center items-center mt-4 space-x-2">
+              <img src="@assets/patsydev_1753301584087.png" alt="Patsy The Pug Dev" className="h-8" />
+              <span className="text-sm text-gray-600 font-medium">Desarrollado por Patsy The Pug Dev</span>
+            </div>
           </div>
         </div>
       </div>
