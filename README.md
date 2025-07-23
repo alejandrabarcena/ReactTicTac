@@ -113,7 +113,7 @@ Este proyecto demuestra conceptos clave de React:
 
 ## 📝 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
+Todos los derechos reservados. Ver `LICENSE` para más detalles sobre el uso permitido.
 
 ## 👨‍💻 Autor
 
