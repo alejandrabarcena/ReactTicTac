@@ -144,12 +144,12 @@ const TicTacToe = () => {
   const isDraw = !winner && board.every(cell => cell);
 
   return (
-    <div className="min-h-screen bg-blue-400 p-8">
+    <div className="min-h-screen bg-blue-500 p-8">
       <div className="max-w-4xl mx-auto">
         
         {/* Título */}
         <div className="text-center mb-8">
-          <h1 className="text-6xl font-bold text-red-600 mb-4 drop-shadow-lg">
+          <h1 className="text-6xl font-bold text-red-500 mb-4 drop-shadow-lg">
             TicTacToe
           </h1>
           <p className="text-xl text-white font-bold drop-shadow-md">Construido con React.js ⚛️</p>
@@ -175,8 +175,8 @@ const TicTacToe = () => {
                   <div className="mb-2">Turno del Jugador:</div>
                   <span className={`inline-block px-4 py-2 rounded-full text-white font-bold text-xl shadow-lg ${
                     isXNext 
-                      ? "bg-blue-500 border-2 border-blue-300" 
-                      : "bg-red-500 border-2 border-red-300"
+                      ? "bg-blue-500 border-2 border-white" 
+                      : "bg-red-500 border-2 border-white"
                   }`}>
                     {isXNext ? "X" : "O"}
                   </span>
@@ -192,18 +192,18 @@ const TicTacToe = () => {
                   className={`text-3xl sm:text-4xl lg:text-5xl font-bold rounded-lg lg:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed shadow-lg ${
                     cell 
                       ? 'bg-white border-4 border-gray-300' 
-                      : 'bg-white hover:bg-yellow-100 border-4 border-gray-300 hover:border-red-400'
+                      : 'bg-white hover:bg-yellow-500 border-4 border-gray-800 hover:border-red-500'
                   }`}
                   onClick={() => handleClick(index)}
                   disabled={winner || isDraw || cell}
                 >
                   {cell === "X" && (
-                    <span className="text-blue-600 drop-shadow-xl font-black">
+                    <span className="text-blue-500 drop-shadow-xl font-black">
                       ✕
                     </span>
                   )}
                   {cell === "O" && (
-                    <span className="text-red-600 drop-shadow-xl font-black">
+                    <span className="text-red-500 drop-shadow-xl font-black">
                       ○
                     </span>
                   )}
@@ -226,69 +226,69 @@ const TicTacToe = () => {
           <div className="w-full xl:w-80 space-y-4 lg:space-y-6">
             
             {/* Puntuación */}
-            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-yellow-400">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-green-600 mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-yellow-500">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-green-500 mb-3 sm:mb-4">
                 🏆 Puntuación
               </h3>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex justify-between items-center p-3 sm:p-4 bg-blue-100 rounded-lg sm:rounded-xl border-4 border-blue-500 shadow-sm">
                   <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm sm:text-base">✕</span>
                     </div>
                     <span className="font-bold text-gray-800 text-sm sm:text-base">Jugador X</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600">{scores.X}</span>
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-500">{scores.X}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 sm:p-4 bg-red-100 rounded-lg sm:rounded-xl border-4 border-red-500 shadow-sm">
                   <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-red-600 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-red-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm sm:text-base">○</span>
                     </div>
                     <span className="font-bold text-gray-800 text-sm sm:text-base">Jugador O</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-600">{scores.O}</span>
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500">{scores.O}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 sm:p-4 bg-yellow-100 rounded-lg sm:rounded-xl border-4 border-yellow-500 shadow-sm">
                   <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-600 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-xs sm:text-sm">🤝</span>
                     </div>
                     <span className="font-bold text-gray-800 text-sm sm:text-base">Empates</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-600">{scores.draws}</span>
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-500">{scores.draws}</span>
                 </div>
               </div>
             </div>
 
             {/* Instrucciones */}
-            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-red-400">
-              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-red-500">
+              <h3 className="text-lg sm:text-xl font-bold text-blue-500 mb-3 sm:mb-4">
                 🎮 Cómo Jugar
               </h3>
               <div className="text-gray-700 space-y-2 sm:space-y-3 text-sm sm:text-base">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">1</span>
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">1</span>
                   <p>Haz clic en una casilla vacía para marcarla</p>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">2</span>
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">2</span>
                   <p>Consigue 3 en línea para ganar</p>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-red-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">3</span>
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">3</span>
                   <p>Puede ser horizontal, vertical o diagonal</p>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">✕</span>
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">✕</span>
                   <p><strong>¡El jugador X siempre empieza!</strong></p>
                 </div>
               </div>
             </div>
 
             {/* Conceptos React */}
-            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-green-400">
-              <h3 className="text-lg sm:text-xl font-bold text-red-600 mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-green-500">
+              <h3 className="text-lg sm:text-xl font-bold text-red-500 mb-3 sm:mb-4">
                 ⚛️ Conceptos React
               </h3>
               <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
@@ -312,8 +312,8 @@ const TicTacToe = () => {
             </div>
 
             {/* Tecnologías Utilizadas */}
-            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-blue-400">
-              <h3 className="text-lg sm:text-xl font-bold text-green-600 mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-blue-500">
+              <h3 className="text-lg sm:text-xl font-bold text-green-500 mb-3 sm:mb-4">
                 🛠️ Stack Tecnológico
               </h3>
               <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
@@ -340,11 +340,11 @@ const TicTacToe = () => {
 
         {/* Footer */}
         <div className="text-center mt-12">
-          <div className="bg-white rounded-lg p-6 shadow-lg border-4 border-yellow-400">
-            <p className="text-lg font-bold text-red-600">
+          <div className="bg-white rounded-lg p-6 shadow-lg border-4 border-yellow-500">
+            <p className="text-lg font-bold text-red-500">
               🚀 TicTacToe - Proyecto educativo con React.js
             </p>
-            <p className="text-blue-600 mt-2 text-sm font-semibold">
+            <p className="text-blue-500 mt-2 text-sm font-semibold">
               Juego interactivo con React.js y TypeScript
             </p>
           </div>
