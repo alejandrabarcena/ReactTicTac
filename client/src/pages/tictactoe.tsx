@@ -368,8 +368,9 @@ const TicTacToe = () => {
             <p className="text-blue-500 mt-2 text-sm font-semibold">
               Juego interactivo con React.js y TypeScript
             </p>
-            <div className="flex justify-center items-center mt-4 space-x-2">
+            <div className="flex justify-center items-center mt-4 space-x-3">
               <img src="/attached_assets/patsydev_1753301584087.png" alt="Patsy The Pug Dev" className="h-8" />
+              <img src="/attached_assets/3_1753301496354.png" alt="GitHub" className="h-6 w-6" />
               <span className="text-sm text-gray-600 font-medium">Desarrollado por Patsy The Pug Dev</span>
             </div>
           </div>
