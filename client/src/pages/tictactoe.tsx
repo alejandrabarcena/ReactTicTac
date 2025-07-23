@@ -144,12 +144,12 @@ const TicTacToe = () => {
   const isDraw = !winner && board.every(cell => cell);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-400 via-red-400 via-yellow-400 to-green-400 p-8">
+    <div className="min-h-screen bg-blue-400 p-8">
       <div className="max-w-4xl mx-auto">
         
         {/* Título */}
         <div className="text-center mb-8">
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-red-600 via-blue-600 via-yellow-500 to-green-600 bg-clip-text text-transparent mb-4 drop-shadow-lg">
+          <h1 className="text-6xl font-bold text-red-600 mb-4 drop-shadow-lg">
             TicTacToe
           </h1>
           <p className="text-xl text-white font-bold drop-shadow-md">Construido con React.js ⚛️</p>
@@ -192,7 +192,7 @@ const TicTacToe = () => {
                   className={`text-3xl sm:text-4xl lg:text-5xl font-bold rounded-lg lg:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed shadow-lg ${
                     cell 
                       ? 'bg-white border-4 border-gray-300' 
-                      : 'bg-white hover:bg-gradient-to-br hover:from-red-100 hover:via-yellow-100 hover:to-blue-100 border-4 border-gray-300 hover:border-red-400'
+                      : 'bg-white hover:bg-yellow-100 border-4 border-gray-300 hover:border-red-400'
                   }`}
                   onClick={() => handleClick(index)}
                   disabled={winner || isDraw || cell}
@@ -215,7 +215,7 @@ const TicTacToe = () => {
             <div className="text-center">
               <button
                 onClick={resetGame}
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border-2 border-white"
+                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border-2 border-white"
               >
                 🔄 Reiniciar Juego
               </button>
