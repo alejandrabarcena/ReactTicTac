@@ -348,8 +348,8 @@ const TicTacToe = () => {
               Juego interactivo con React.js y TypeScript
             </p>
             <div className="flex justify-center items-center space-x-3 md:space-x-4">
-              <div className="w-6 h-6 md:w-8 md:h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-md">💻</div>
-              <span className="text-xs md:text-sm text-gray-600 font-medium">Desarrollado con React + TypeScript</span>
+              <div className="w-6 h-6 md:w-8 md:h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-md">⚛️</div>
+              <span className="text-xs md:text-sm text-gray-600 font-medium">Proyecto educativo</span>
             </div>
           </div>
         </div>

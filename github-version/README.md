@@ -65,10 +65,8 @@ El juego está optimizado para funcionar perfectamente en:
 - **Conditional Rendering** - Mostrar ganador, empate o turno actual
 - **Array Methods** - map() para renderizar las casillas del tablero
 
-## 📄 Licencia
 
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
 ---
 
-**Desarrollado con React + TypeScript** 💻
+Proyecto educativo para aprender React + TypeScript
