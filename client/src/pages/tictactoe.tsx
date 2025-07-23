@@ -287,26 +287,51 @@ const TicTacToe = () => {
             </div>
 
             {/* Conceptos React */}
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-4 sm:p-6 border border-gray-200">
-              <h3 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text text-transparent mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-green-400">
+              <h3 className="text-lg sm:text-xl font-bold text-red-600 mb-3 sm:mb-4">
                 ⚛️ Conceptos React
               </h3>
               <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
-                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-r-lg">
+                <div className="bg-blue-50 border-4 border-blue-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
                   <div className="font-bold text-blue-700">useState</div>
                   <div className="text-blue-600">State para el tablero y jugador actual</div>
                 </div>
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-r-lg">
+                <div className="bg-green-50 border-4 border-green-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
                   <div className="font-bold text-green-700">Event Handlers</div>
                   <div className="text-green-600">onClick para manejar clics</div>
                 </div>
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-r-lg">
-                  <div className="font-bold text-purple-700">Conditional Rendering</div>
-                  <div className="text-purple-600">Mostrar ganador o turno actual</div>
+                <div className="bg-red-50 border-4 border-red-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="font-bold text-red-700">Conditional Rendering</div>
+                  <div className="text-red-600">Mostrar ganador o turno actual</div>
                 </div>
-                <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-r-lg">
-                  <div className="font-bold text-red-700">Array Methods</div>
-                  <div className="text-red-600">map() para renderizar casillas</div>
+                <div className="bg-yellow-50 border-4 border-yellow-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="font-bold text-yellow-700">Array Methods</div>
+                  <div className="text-yellow-600">map() para renderizar casillas</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tecnologías Utilizadas */}
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-blue-400">
+              <h3 className="text-lg sm:text-xl font-bold text-green-600 mb-3 sm:mb-4">
+                🛠️ Stack Tecnológico
+              </h3>
+              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
+                <div className="bg-blue-50 border-4 border-blue-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="font-bold text-blue-700">React 18 + TypeScript</div>
+                  <div className="text-blue-600">Interfaz moderna con tipado estático</div>
+                </div>
+                <div className="bg-red-50 border-4 border-red-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="font-bold text-red-700">Tailwind CSS</div>
+                  <div className="text-red-600">Estilos utility-first y responsive</div>
+                </div>
+                <div className="bg-yellow-50 border-4 border-yellow-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="font-bold text-yellow-700">Vite</div>
+                  <div className="text-yellow-600">Build tool ultra-rápido</div>
+                </div>
+                <div className="bg-green-50 border-4 border-green-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                  <div className="font-bold text-green-700">Web Audio API</div>
+                  <div className="text-green-600">Efectos de sonido nativos</div>
                 </div>
               </div>
             </div>
@@ -315,11 +340,11 @@ const TicTacToe = () => {
 
         {/* Footer */}
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-6 shadow-sm">
-            <p className="text-lg font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <div className="bg-white rounded-lg p-6 shadow-lg border-4 border-yellow-400">
+            <p className="text-lg font-bold text-red-600">
               🚀 TicTacToe - Proyecto educativo con React.js
             </p>
-            <p className="text-gray-600 mt-2 text-sm">
+            <p className="text-blue-600 mt-2 text-sm font-semibold">
               Juego interactivo con React.js y TypeScript
             </p>
           </div>

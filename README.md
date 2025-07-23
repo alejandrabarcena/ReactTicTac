@@ -21,11 +21,40 @@ Un juego de TicTacToe completamente funcional construido con React.js, siguiendo
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **React.js 18** - Biblioteca de UI con hooks modernos
-- **TypeScript** - Tipado estático para mayor robustez
-- **Tailwind CSS** - Framework de CSS utilitario
-- **Vite** - Build tool rápido y moderno
-- **Express.js** - Servidor backend simple
+### Frontend
+- **React 18** - Librería de JavaScript para interfaces de usuario
+- **TypeScript** - Superset de JavaScript con tipado estático
+- **Tailwind CSS** - Framework de CSS utility-first
+- **Vite** - Build tool y servidor de desarrollo ultra-rápido
+- **Wouter** - Router minimalista para React
+- **Lucide React** - Iconos SVG modernos
+
+### Backend
+- **Express.js** - Framework web para Node.js
+- **TypeScript** - Desarrollo backend con tipado estático
+- **Drizzle ORM** - ORM moderno para TypeScript
+- **PostgreSQL** - Base de datos relacional (configurada)
+
+### Desarrollo y Build
+- **Node.js** - Entorno de ejecución para JavaScript
+- **esbuild** - Bundler ultra-rápido para JavaScript/TypeScript
+- **PostCSS** - Herramienta para transformar CSS
+- **Autoprefixer** - Plugin para añadir prefijos CSS automáticamente
+
+### UI/UX
+- **Radix UI** - Componentes primitivos accesibles
+- **shadcn/ui** - Biblioteca de componentes reutilizables
+- **Framer Motion** - Librería de animaciones para React
+- **TanStack Query** - Manejo de estado del servidor
+
+### Audio
+- **Web Audio API** - API nativa para efectos de sonido
+- **AudioContext** - Generación de sonidos sintéticos
+
+### Validación y Esquemas
+- **Zod** - Validación de esquemas TypeScript-first
+- **React Hook Form** - Manejo eficiente de formularios
+- **@hookform/resolvers** - Integración de validadores con React Hook Form
 
 ## 📦 Instalación y Uso
 
