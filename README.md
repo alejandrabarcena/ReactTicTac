@@ -111,9 +111,7 @@ Este proyecto demuestra conceptos clave de React:
 4. Push a la rama (`git push origin feature/nueva-caracteristica`)
 5. Abre un Pull Request
 
-## 📝 Licencia
 
-Todos los derechos reservados. Ver `LICENSE` para más detalles sobre el uso permitido.
 
 ## 👨‍💻 Autor
 
