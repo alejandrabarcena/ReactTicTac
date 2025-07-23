@@ -82,10 +82,10 @@ const TicTacToe = () => {
           <p className="text-xl text-gray-700 font-medium">Construido con React.js ⚛️</p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
+        <div className="flex flex-col lg:flex-row gap-8 items-center justify-center">
           
           {/* Juego principal */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md lg:max-w-lg">
             
             {/* Estado del juego */}
             <div className="text-center mb-6">
@@ -112,7 +112,7 @@ const TicTacToe = () => {
             </div>
 
             {/* Tablero */}
-            <div className="grid grid-cols-3 gap-3 w-80 h-80 mx-auto mb-6">
+            <div className="grid grid-cols-3 gap-3 w-80 h-80 mx-auto mb-6 justify-center items-center">
               {board.map((cell, index) => (
                 <button
                   key={index}
