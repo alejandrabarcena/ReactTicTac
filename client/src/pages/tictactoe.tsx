@@ -247,7 +247,7 @@ const TicTacToe = () => {
               🚀 TicTacToe - Proyecto educativo con React.js
             </p>
             <p className="text-gray-600 mt-2 text-sm">
-              Creado siguiendo el flujo de desarrollo estructurado • Listo para GitHub
+              Juego interactivo con React.js y TypeScript
             </p>
           </div>
         </div>
