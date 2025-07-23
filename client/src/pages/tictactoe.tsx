@@ -27,6 +27,53 @@ const TicTacToe = () => {
     return null;
   };
 
+  // Función para reproducir sonidos
+  const playSound = (type: 'click' | 'win' | 'draw') => {
+    try {
+      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      // Configurar sonidos diferentes
+      switch (type) {
+        case 'click':
+          oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+          gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+          oscillator.start(audioContext.currentTime);
+          oscillator.stop(audioContext.currentTime + 0.1);
+          break;
+        case 'win':
+          // Sonido de victoria - secuencia de notas
+          const frequencies = [523, 659, 784, 1047]; // Do, Mi, Sol, Do
+          frequencies.forEach((freq, i) => {
+            const osc = audioContext.createOscillator();
+            const gain = audioContext.createGain();
+            osc.connect(gain);
+            gain.connect(audioContext.destination);
+            osc.frequency.setValueAtTime(freq, audioContext.currentTime + i * 0.15);
+            gain.gain.setValueAtTime(0.2, audioContext.currentTime + i * 0.15);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + i * 0.15 + 0.2);
+            osc.start(audioContext.currentTime + i * 0.15);
+            osc.stop(audioContext.currentTime + i * 0.15 + 0.2);
+          });
+          break;
+        case 'draw':
+          oscillator.frequency.setValueAtTime(400, audioContext.currentTime);
+          gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+          oscillator.start(audioContext.currentTime);
+          oscillator.stop(audioContext.currentTime + 0.3);
+          break;
+      }
+    } catch (error) {
+      console.log("Audio no disponible:", error);
+    }
+  };
+
   // Función para manejar clic en casilla
   const handleClick = (index: number) => {
     console.log("Cell clicked:", index);
@@ -37,6 +84,9 @@ const TicTacToe = () => {
       console.log("Move not allowed");
       return;
     }
+
+    // Reproducir sonido de clic
+    playSound('click');
 
     // Crear nuevo tablero con la jugada
     const newBoard = [...board];
@@ -50,9 +100,11 @@ const TicTacToe = () => {
     const winner = checkWinner(newBoard);
     if (winner) {
       console.log("Game won by:", winner);
+      playSound('win');
       setScores(prev => ({ ...prev, [winner]: prev[winner as keyof typeof prev] + 1 }));
     } else if (newBoard.every(cell => cell)) {
       console.log("Game is a draw");
+      playSound('draw');
       setScores(prev => ({ ...prev, draws: prev.draws + 1 }));
     }
     
@@ -63,6 +115,27 @@ const TicTacToe = () => {
   // Función para reiniciar juego
   const resetGame = () => {
     console.log("Game reset");
+    
+    // Sonido de reinicio
+    try {
+      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(300, audioContext.currentTime + 0.2);
+      gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.2);
+    } catch (error) {
+      console.log("Audio no disponible:", error);
+    }
+    
     setBoard(Array(9).fill(null));
     setIsXNext(true);
   };
