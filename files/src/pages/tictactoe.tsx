@@ -342,10 +342,10 @@ const TicTacToe = () => {
                 </div>
                 <div className="bg-red-50 border-4 border-red-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
                   <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-sm font-bold">📱</div>
-                    <div className="font-bold text-red-700">GitHub</div>
+                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-sm font-bold">🎨</div>
+                    <div className="font-bold text-red-700">Tailwind CSS</div>
                   </div>
-                  <div className="text-red-600">Control de versiones</div>
+                  <div className="text-red-600">Estilos y diseño responsivo</div>
                 </div>
                 <div className="bg-purple-50 border-4 border-purple-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
                   <div className="flex items-center space-x-2 mb-1">
@@ -370,7 +370,7 @@ const TicTacToe = () => {
             </p>
             <div className="flex justify-center items-center mt-4 space-x-3">
               <img src="/attached_assets/logo-patsydev.png" alt="Patsy The Pug Dev" className="h-8" />
-              <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold">Git</div>
+              <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">💻</div>
               <span className="text-sm text-gray-600 font-medium">Desarrollado por Patsy The Pug Dev</span>
             </div>
           </div>
