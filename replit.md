@@ -41,6 +41,7 @@ A React.js TicTacToe game with an interactive and educational approach to fronte
 - Código limpio sin atribuciones confusas
 - Propiedad completa del código desarrollado
 - Conservar iconos educativos en attached_assets
+- Conservar elementos de Patsy Pug (gama-patsydev.png, logo-patsydev.png, mascota-octocat.png)
 
 ## Autoría y Licencias
 - **Propietario**: Autoría completa del cliente
@@ -49,6 +50,7 @@ A React.js TicTacToe game with an interactive and educational approach to fronte
 - **Sin referencias externas**: Código limpio de atribuciones ajenas
 - **Iconos**: Pagados y autorizados para uso del cliente
 - **Recursos incluidos**: Todos los assets en attached_assets son propiedad del cliente
+- **Elementos Patsy Pug**: Conservados según preferencia del cliente
 - Carpetas confusas removidas: `clean-github-version` y `github-version`
 
 ## Recent Changes
