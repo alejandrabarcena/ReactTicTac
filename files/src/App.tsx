@@ -5,12 +5,12 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
-import SimpleTicTacToe from "@/pages/simple-tictactoe";
+import TestVisual from "@/pages/test-visual";
 
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={SimpleTicTacToe} />
+      <Route path="/" component={TestVisual} />
       <Route component={NotFound} />
     </Switch>
   );
