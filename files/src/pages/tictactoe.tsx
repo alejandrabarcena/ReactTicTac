@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 // Use direct image URLs since @assets alias has issues with .PNG extensions
 
