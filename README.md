@@ -1,4 +1,4 @@
-# 🟪 TicTacToe ACTUALIZADO
+# 🟪 TicTacToe 
 
 Este proyecto es un juego interactivo de Tic Tac Toe (Gato) desarrollado con **React**, **Tailwind CSS** y **Vite**. Permite jugar turnos, llevar la cuenta de partidas ganadas, perdidas y empatadas, y reiniciar el juego.
 
