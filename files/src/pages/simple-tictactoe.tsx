@@ -55,7 +55,7 @@ const SimpleTicTacToe = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      background: 'linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%)',
       padding: '20px',
       fontFamily: 'Arial, sans-serif'
     }}>
@@ -73,7 +73,7 @@ const SimpleTicTacToe = () => {
           marginBottom: '20px',
           fontSize: '2rem'
         }}>
-          TicTacToe
+          🎮 TicTacToe ACTUALIZADO 🎮
         </h1>
 
         {/* Puntuación */}
@@ -93,11 +93,15 @@ const SimpleTicTacToe = () => {
           textAlign: 'center',
           marginBottom: '20px',
           fontSize: '1.2rem',
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          background: 'linear-gradient(45deg, #ff6b6b, #4ecdc4)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          padding: '10px'
         }}>
-          {winner ? `¡Ganador: ${winner}!` :
-           isDraw ? '¡Empate!' :
-           `Turno: ${isXNext ? 'X' : 'O'}`}
+          {winner ? `🏆 ¡GANADOR: ${winner}! 🏆` :
+           isDraw ? '🤝 ¡EMPATE! 🤝' :
+           `🎯 TURNO: ${isXNext ? 'X' : 'O'} 🎯`}
         </div>
 
         {/* Tablero */}
@@ -140,16 +144,20 @@ const SimpleTicTacToe = () => {
           <button
             onClick={resetGame}
             style={{
-              background: '#3498db',
+              background: 'linear-gradient(45deg, #3498db, #2ecc71)',
               color: 'white',
               border: 'none',
-              padding: '10px 20px',
-              borderRadius: '5px',
+              padding: '15px 25px',
+              borderRadius: '10px',
               cursor: 'pointer',
-              fontSize: '1rem'
+              fontSize: '1.1rem',
+              fontWeight: 'bold',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+              transform: 'scale(1)',
+              transition: 'all 0.2s'
             }}
           >
-            Nuevo Juego
+🎮 Nuevo Juego
           </button>
           <button
             onClick={resetScores}
@@ -163,7 +171,7 @@ const SimpleTicTacToe = () => {
               fontSize: '1rem'
             }}
           >
-            Reset Puntuación
+🔄 Reset Puntuación
           </button>
         </div>
       </div>
