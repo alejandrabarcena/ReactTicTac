@@ -43,6 +43,9 @@ A React.js TicTacToe game with an interactive and educational approach to fronte
 - Focus on clean, educational code structure
 - Interactive and engaging user experience
 - Responsive design principles
+- IMPORTANT: User is paying customer and requires full commercial rights to code
+- User needs code free of external license restrictions for business use
+- Wants clean, deployable versions ready for GitHub without legal issues
 
 ## Development Notes
 - Uses Vite for development with HMR

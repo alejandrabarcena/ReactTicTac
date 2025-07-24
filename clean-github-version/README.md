@@ -27,4 +27,14 @@ npm run build
 - Efectos de sonido
 - Interfaz moderna
 
-Tu código, tu proyecto.
+## Uso Comercial
+
+Este código es completamente libre para uso comercial. Puedes:
+
+- Usar en proyectos comerciales
+- Modificar según tus necesidades
+- Vender como parte de productos
+- Integrar en aplicaciones comerciales
+- No requiere atribución
+
+Tu código, tu negocio.
