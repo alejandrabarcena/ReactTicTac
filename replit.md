@@ -47,6 +47,8 @@ A React.js TicTacToe game with an interactive and educational approach to fronte
 - **Licencia**: MIT License personalizada
 - **Uso**: Libertad total para uso comercial y personal
 - **Sin referencias externas**: Código limpio de atribuciones ajenas
+- **Iconos**: Pagados y autorizados para uso del cliente
+- **Recursos incluidos**: Todos los assets en attached_assets son propiedad del cliente
 - Carpetas confusas removidas: `clean-github-version` y `github-version`
 
 ## Recent Changes
