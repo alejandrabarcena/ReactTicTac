@@ -9,6 +9,8 @@ const TicTacToe = () => {
   const [isXNext, setIsXNext] = useState(true);
   // Puntuación
   const [scores, setScores] = useState({ X: 0, O: 0, draws: 0 });
+  // Contador de movimientos
+  const [moveCount, setMoveCount] = useState(0);
 
   // Función para detectar ganador
   const checkWinner = (squares: (string | null)[]) => {
@@ -97,6 +99,7 @@ const TicTacToe = () => {
     console.log("New board:", newBoard);
     
     setBoard(newBoard);
+    setMoveCount(prev => prev + 1);
     
     // Verificar si hay ganador
     const winner = checkWinner(newBoard);
@@ -140,6 +143,7 @@ const TicTacToe = () => {
     
     setBoard(Array(9).fill(null));
     setIsXNext(true);
+    setMoveCount(0);
   };
 
   const winner = checkWinner(board);
@@ -165,12 +169,18 @@ const TicTacToe = () => {
             {/* Estado del juego */}
             <div className="text-center mb-4 lg:mb-6">
               {winner ? (
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-600 animate-bounce bg-white rounded-lg p-3 shadow-lg">
-                  ¡Jugador {winner} ganó! 🎉
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-600 animate-bounce bg-gradient-to-r from-green-100 to-green-200 rounded-lg p-4 shadow-xl border-4 border-green-400">
+                  🏆 ¡Jugador {winner} ganó! 🎉
+                  <div className="text-sm mt-2 text-green-700 font-normal">
+                    ¡Excelente jugada! Haz clic en "Reiniciar" para otra partida.
+                  </div>
                 </div>
               ) : isDraw ? (
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-yellow-600 bg-white rounded-lg p-3 shadow-lg">
-                  ¡Empate! 🤝
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-yellow-600 bg-gradient-to-r from-yellow-100 to-yellow-200 rounded-lg p-4 shadow-xl border-4 border-yellow-400">
+                  🤝 ¡Empate perfecto! 
+                  <div className="text-sm mt-2 text-yellow-700 font-normal">
+                    Ningún jugador pudo conseguir 3 en línea.
+                  </div>
                 </div>
               ) : (
                 <div className="text-lg sm:text-xl font-semibold text-white bg-black/20 rounded-lg p-3 backdrop-blur-sm">
@@ -213,13 +223,21 @@ const TicTacToe = () => {
               ))}
             </div>
 
-            {/* Botón reiniciar */}
-            <div className="text-center">
+            {/* Botones de acción */}
+            <div className="text-center space-y-3">
               <button
                 onClick={resetGame}
                 className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border-2 border-white"
               >
                 🔄 Reiniciar Juego
+              </button>
+              
+              {/* Botón para limpiar puntuación */}
+              <button
+                onClick={() => setScores({ X: 0, O: 0, draws: 0 })}
+                className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border-2 border-white ml-3"
+              >
+                🗑️ Limpiar Puntuación
               </button>
             </div>
           </div>
@@ -364,8 +382,11 @@ const TicTacToe = () => {
               🚀 TicTacToe - Proyecto educativo con React.js
             </p>
             <p className="text-blue-500 text-sm md:text-base font-semibold mb-4">
-              Juego interactivo con React.js y TypeScript
+              Juego interactivo con efectos de sonido y puntuación
             </p>
+            <div className="text-xs md:text-sm text-gray-600 font-medium">
+              ✨ Funciones: Sonidos dinámicos • Puntuación persistente • Interfaz responsive
+            </div>
             <div className="flex justify-center items-center space-x-3 md:space-x-4">
               <div className="w-6 h-6 md:w-8 md:h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-md">⚛️</div>
               <span className="text-xs md:text-sm text-gray-600 font-medium">Proyecto educativo</span>
