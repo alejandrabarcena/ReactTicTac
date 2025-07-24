@@ -20,12 +20,6 @@ Este proyecto es un juego interactivo de Tic Tac Toe (Gato) desarrollado con **R
 
 ---
 
-## 🖼️ Vista Previa
-
-![Vista previa del juego](https://react-traffic-light-ukiu.vercel.app/og.png) <!-- Puedes cambiar esto por una imagen local o la URL real -->
-
----
-
 ## 👩‍🎨 Créditos
 
 **Desarrollado por:** Alejandra Bárcena  
