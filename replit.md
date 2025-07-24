@@ -36,11 +36,16 @@ A React.js TicTacToe game with an interactive and educational approach to fronte
 - ✅ All React imports fixed
 - ✅ TicTacToe game is functional with interactive UI
 
+## User Preferences
+- No incluir enlaces o referencias a empresas/personas externas como autores
+- Código limpio sin atribuciones confusas
+- Propiedad completa del código desarrollado
+
 ## Autoría y Licencias
-- **Propietario**: Tú tienes la autoría completa del código
-- **Licencia**: MIT License con tu nombre como autor
-- **Uso**: Puedes usar, modificar, distribuir y comercializar libremente
-- **Sin restricciones**: No hay limitaciones para uso comercial o personal
+- **Propietario**: Autoría completa del cliente
+- **Licencia**: MIT License personalizada
+- **Uso**: Libertad total para uso comercial y personal
+- **Sin referencias externas**: Código limpio de atribuciones ajenas
 - Carpetas confusas removidas: `clean-github-version` y `github-version`
 
 ## Recent Changes
