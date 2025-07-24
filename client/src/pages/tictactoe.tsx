@@ -229,130 +229,128 @@ const TicTacToe = () => {
             
             {/* Puntuación */}
             <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-yellow-500">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-green-500 mb-3 sm:mb-4">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-green-600 mb-3 md:mb-4 text-center">
                 🏆 Puntuación
               </h3>
-              <div className="space-y-3 sm:space-y-4">
-                <div className="flex justify-between items-center p-3 sm:p-4 bg-blue-100 rounded-lg sm:rounded-xl border-4 border-blue-500 shadow-sm">
-                  <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm sm:text-base">✕</span>
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex justify-between items-center p-3 md:p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg md:rounded-xl border-3 border-blue-400 shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-500 rounded-full flex items-center justify-center shadow-md">
+                      <span className="text-white font-bold text-sm md:text-base">✕</span>
                     </div>
-                    <span className="font-bold text-gray-800 text-sm sm:text-base">Jugador X</span>
+                    <span className="font-bold text-gray-800 text-sm md:text-base">Jugador X</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-500">{scores.X}</span>
+                  <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600">{scores.X}</span>
                 </div>
-                <div className="flex justify-between items-center p-3 sm:p-4 bg-red-100 rounded-lg sm:rounded-xl border-4 border-red-500 shadow-sm">
-                  <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-red-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm sm:text-base">○</span>
+                <div className="flex justify-between items-center p-3 md:p-4 bg-gradient-to-r from-red-50 to-red-100 rounded-lg md:rounded-xl border-3 border-red-400 shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-red-500 rounded-full flex items-center justify-center shadow-md">
+                      <span className="text-white font-bold text-sm md:text-base">○</span>
                     </div>
-                    <span className="font-bold text-gray-800 text-sm sm:text-base">Jugador O</span>
+                    <span className="font-bold text-gray-800 text-sm md:text-base">Jugador O</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500">{scores.O}</span>
+                  <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-red-600">{scores.O}</span>
                 </div>
-                <div className="flex justify-between items-center p-3 sm:p-4 bg-yellow-100 rounded-lg sm:rounded-xl border-4 border-yellow-500 shadow-sm">
-                  <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-xs sm:text-sm">🤝</span>
+                <div className="flex justify-between items-center p-3 md:p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-lg md:rounded-xl border-3 border-green-400 shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-green-500 rounded-full flex items-center justify-center shadow-md">
+                      <span className="text-white font-bold text-xs md:text-sm">🤝</span>
                     </div>
-                    <span className="font-bold text-gray-800 text-sm sm:text-base">Empates</span>
+                    <span className="font-bold text-gray-800 text-sm md:text-base">Empates</span>
                   </div>
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-500">{scores.draws}</span>
+                  <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600">{scores.draws}</span>
                 </div>
               </div>
             </div>
 
             {/* Instrucciones */}
-            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-red-500">
-              <h3 className="text-lg sm:text-xl font-bold text-blue-500 mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-xl p-4 md:p-6 border-4 border-purple-400">
+              <h3 className="text-lg md:text-xl font-bold text-purple-600 mb-3 md:mb-4 text-center">
                 🎮 Cómo Jugar
               </h3>
-              <div className="text-gray-700 space-y-2 sm:space-y-3 text-sm sm:text-base">
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">1</span>
-                  <p>Haz clic en una casilla vacía para marcarla</p>
+              <div className="text-gray-700 space-y-3 md:space-y-4 text-sm md:text-base">
+                <div className="flex items-start space-x-3 md:space-x-4 p-2 rounded-lg bg-blue-50 border-l-4 border-blue-400">
+                  <span className="w-6 h-6 md:w-7 md:h-7 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm font-bold flex-shrink-0 shadow-sm">1</span>
+                  <p className="font-medium">Haz clic en una casilla vacía para marcarla</p>
                 </div>
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">2</span>
-                  <p>Consigue 3 en línea para ganar</p>
+                <div className="flex items-start space-x-3 md:space-x-4 p-2 rounded-lg bg-green-50 border-l-4 border-green-400">
+                  <span className="w-6 h-6 md:w-7 md:h-7 bg-green-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm font-bold flex-shrink-0 shadow-sm">2</span>
+                  <p className="font-medium">Consigue 3 en línea para ganar</p>
                 </div>
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">3</span>
-                  <p>Puede ser horizontal, vertical o diagonal</p>
+                <div className="flex items-start space-x-3 md:space-x-4 p-2 rounded-lg bg-red-50 border-l-4 border-red-400">
+                  <span className="w-6 h-6 md:w-7 md:h-7 bg-red-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm font-bold flex-shrink-0 shadow-sm">3</span>
+                  <p className="font-medium">Puede ser horizontal, vertical o diagonal</p>
                 </div>
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold flex-shrink-0">✕</span>
-                  <p><strong>¡El jugador X siempre empieza!</strong></p>
+                <div className="flex items-start space-x-3 md:space-x-4 p-2 rounded-lg bg-yellow-50 border-l-4 border-yellow-400">
+                  <span className="w-6 h-6 md:w-7 md:h-7 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm font-bold flex-shrink-0 shadow-sm">✕</span>
+                  <p className="font-bold text-yellow-700">¡El jugador X siempre empieza!</p>
                 </div>
               </div>
             </div>
 
+          </div>
+
+          {/* Panel lateral derecho */}
+          <div className="lg:col-span-1 xl:col-span-1 space-y-4 md:space-y-6 order-3 lg:order-3">
+            
             {/* Conceptos React */}
-            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-green-500">
-              <h3 className="text-lg sm:text-xl font-bold text-red-500 mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-xl p-4 md:p-6 border-4 border-green-400">
+              <h3 className="text-lg md:text-xl font-bold text-green-600 mb-3 md:mb-4 text-center">
                 ⚛️ Conceptos React
               </h3>
-              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
-                <div className="bg-blue-50 border-4 border-blue-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="font-bold text-blue-700">useState</div>
-                  <div className="text-blue-600">State para el tablero y jugador actual</div>
+              <div className="space-y-3 md:space-y-4 text-xs md:text-sm">
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-400 pl-3 md:pl-4 py-3 rounded-lg shadow-sm">
+                  <div className="font-bold text-blue-700 text-sm md:text-base">useState</div>
+                  <div className="text-blue-600">Estado del tablero y jugador actual</div>
                 </div>
-                <div className="bg-green-50 border-4 border-green-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="font-bold text-green-700">Event Handlers</div>
+                <div className="bg-gradient-to-r from-green-50 to-green-100 border-l-4 border-green-400 pl-3 md:pl-4 py-3 rounded-lg shadow-sm">
+                  <div className="font-bold text-green-700 text-sm md:text-base">Event Handlers</div>
                   <div className="text-green-600">onClick para manejar clics</div>
                 </div>
-                <div className="bg-red-50 border-4 border-red-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="font-bold text-red-700">Conditional Rendering</div>
+                <div className="bg-gradient-to-r from-red-50 to-red-100 border-l-4 border-red-400 pl-3 md:pl-4 py-3 rounded-lg shadow-sm">
+                  <div className="font-bold text-red-700 text-sm md:text-base">Conditional Rendering</div>
                   <div className="text-red-600">Mostrar ganador o turno actual</div>
                 </div>
-                <div className="bg-yellow-50 border-4 border-yellow-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="font-bold text-yellow-700">Array Methods</div>
+                <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 border-l-4 border-yellow-400 pl-3 md:pl-4 py-3 rounded-lg shadow-sm">
+                  <div className="font-bold text-yellow-700 text-sm md:text-base">Array Methods</div>
                   <div className="text-yellow-600">map() para renderizar casillas</div>
                 </div>
               </div>
             </div>
 
             {/* Tecnologías Utilizadas */}
-            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border-4 border-blue-500">
-              <h3 className="text-lg sm:text-xl font-bold text-green-500 mb-3 sm:mb-4">
+            <div className="bg-white rounded-xl shadow-xl p-4 md:p-6 border-4 border-indigo-400">
+              <h3 className="text-lg md:text-xl font-bold text-indigo-600 mb-3 md:mb-4 text-center">
                 🛠️ Stack Tecnológico
               </h3>
-              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
-                <div className="bg-blue-50 border-4 border-blue-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+              <div className="space-y-3 md:space-y-4 text-xs md:text-sm">
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-400 pl-3 md:pl-4 py-3 rounded-lg shadow-sm">
                   <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">⚛️</div>
-                    <div className="font-bold text-blue-700">React 18</div>
+                    <div className="w-6 h-6 md:w-7 md:h-7 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-sm">⚛️</div>
+                    <div className="font-bold text-blue-700 text-sm md:text-base">React 18</div>
                   </div>
-                  <div className="text-blue-600">Interfaz moderna con Hooks</div>
+                  <div className="text-blue-600 text-xs md:text-sm">Interfaz moderna con Hooks</div>
                 </div>
-                <div className="bg-green-50 border-4 border-green-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                <div className="bg-gradient-to-r from-green-50 to-green-100 border-l-4 border-green-400 pl-3 md:pl-4 py-3 rounded-lg shadow-sm">
                   <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold">TS</div>
-                    <div className="font-bold text-green-700">TypeScript</div>
+                    <div className="w-6 h-6 md:w-7 md:h-7 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-sm">TS</div>
+                    <div className="font-bold text-green-700 text-sm md:text-base">TypeScript</div>
                   </div>
-                  <div className="text-green-600">Tipado estático y seguridad</div>
+                  <div className="text-green-600 text-xs md:text-sm">Tipado estático y seguridad</div>
                 </div>
-                <div className="bg-yellow-50 border-4 border-yellow-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 border-l-4 border-yellow-400 pl-3 md:pl-4 py-3 rounded-lg shadow-sm">
                   <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center text-white text-sm font-bold">⚡</div>
-                    <div className="font-bold text-yellow-700">Vite</div>
+                    <div className="w-6 h-6 md:w-7 md:h-7 bg-yellow-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-sm">⚡</div>
+                    <div className="font-bold text-yellow-700 text-sm md:text-base">Vite</div>
                   </div>
-                  <div className="text-yellow-600">Build tool ultra-rápido</div>
+                  <div className="text-yellow-600 text-xs md:text-sm">Build tool ultra-rápido</div>
                 </div>
-                <div className="bg-red-50 border-4 border-red-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
+                <div className="bg-gradient-to-r from-red-50 to-red-100 border-l-4 border-red-400 pl-3 md:pl-4 py-3 rounded-lg shadow-sm">
                   <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-sm font-bold">📱</div>
-                    <div className="font-bold text-red-700">GitHub</div>
+                    <div className="w-6 h-6 md:w-7 md:h-7 bg-red-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-sm">🎨</div>
+                    <div className="font-bold text-red-700 text-sm md:text-base">Tailwind CSS</div>
                   </div>
-                  <div className="text-red-600">Control de versiones</div>
-                </div>
-                <div className="bg-purple-50 border-4 border-purple-500 pl-3 sm:pl-4 py-2 sm:py-3 rounded-lg">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">🌐</div>
-                    <div className="font-bold text-purple-700">Web Development</div>
-                  </div>
-                  <div className="text-purple-600">Audio API + Responsive Design</div>
+                  <div className="text-red-600 text-xs md:text-sm">Estilos y diseño responsivo</div>
                 </div>
               </div>
             </div>
@@ -360,18 +358,17 @@ const TicTacToe = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-lg p-6 shadow-lg border-4 border-yellow-500">
-            <p className="text-lg font-bold text-red-500">
+        <div className="text-center mt-8 md:mt-12 lg:col-span-full xl:col-span-3">
+          <div className="bg-gradient-to-r from-white to-gray-50 rounded-xl p-4 md:p-6 shadow-xl border-4 border-yellow-400 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl font-bold text-red-500 mb-2">
               🚀 TicTacToe - Proyecto educativo con React.js
             </p>
-            <p className="text-blue-500 mt-2 text-sm font-semibold">
+            <p className="text-blue-500 text-sm md:text-base font-semibold mb-4">
               Juego interactivo con React.js y TypeScript
             </p>
-            <div className="flex justify-center items-center mt-4 space-x-3">
-              <img src="/attached_assets/logo-patsydev.png" alt="Patsy The Pug Dev" className="h-8" />
-              <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold">Git</div>
-              <span className="text-sm text-gray-600 font-medium">Desarrollado por Patsy The Pug Dev</span>
+            <div className="flex justify-center items-center space-x-3 md:space-x-4">
+              <div className="w-6 h-6 md:w-8 md:h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-md">⚛️</div>
+              <span className="text-xs md:text-sm text-gray-600 font-medium">Proyecto educativo</span>
             </div>
           </div>
         </div>
