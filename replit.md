@@ -40,6 +40,7 @@ A React.js TicTacToe game with an interactive and educational approach to fronte
 - No incluir enlaces o referencias a empresas/personas externas como autores
 - Código limpio sin atribuciones confusas
 - Propiedad completa del código desarrollado
+- Conservar iconos educativos en attached_assets
 
 ## Autoría y Licencias
 - **Propietario**: Autoría completa del cliente
